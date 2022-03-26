@@ -49,7 +49,7 @@ class OCRLanguage(Document):
         self.TESSDATA_LINK = "https://github.com/tesseract-ocr/tessdata{}/blob/master/{}.traineddata?raw=true"
         if self.code:
             self.is_supported = check_language(self.code)
-
+    @frappe.whitelist()
     def download_tesseract(self):
         if self.type_of_ocr == 'Default':
             path = self.TESSDATA_LINK.format("", self.name)
