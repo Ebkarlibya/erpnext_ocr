@@ -1,14 +1,15 @@
 frappe.ui.form.on('OCR Read', {
     setup: function (frm) {
-        frappe.call({
-            method: "erpnext_ocr.erpnext_ocr.doctype.ocr_language.ocr_language.get_current_language",
-            args: {
-                'user': frappe.user['name']
-            },
-            callback: function (r) {
-                cur_frm.set_value("language", r.message);
-            }
-        })
+        // issue with iser language, example en-US
+        // frappe.call({
+        //     method: "erpnext_ocr.erpnext_ocr.doctype.ocr_language.ocr_language.get_current_language",
+        //     args: {
+        //         'user': frappe.user['name']
+        //     },
+        //     callback: function (r) {
+        //         cur_frm.set_value("language", r.message);
+        //     }
+        // })
     },
     search: function(frm){
         jQuery("textarea[data-fieldname='read_result']").highlightWithinTextarea({
