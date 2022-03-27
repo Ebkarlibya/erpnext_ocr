@@ -20,7 +20,7 @@ app_license = "MIT"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/erpnext_ocr/css/Aimara.css"
 # app_include_js = "/assets/erpnext_ocr/js/Aimara.js"
-#app_include_css = "/assets/erpnext_ocr/css/treeview.min.css"
+app_include_css = ["/assets/erpnext_ocr/css/hwt.css"]
 #app_include_js = "/assets/erpnext_ocr/js/treeview.min.js"
 
 # include js, css files in header of web template
@@ -31,7 +31,7 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-#doctype_js = {"Sales Invoice" : "public/js/Aimara.js"}
+doctype_js = {"OCR Read" : "public/js/hwt.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}

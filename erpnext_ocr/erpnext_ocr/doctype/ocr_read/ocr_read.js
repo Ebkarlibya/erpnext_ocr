@@ -10,6 +10,11 @@ frappe.ui.form.on('OCR Read', {
             }
         })
     },
+    search: function(frm){
+        jQuery("textarea[data-fieldname='read_result']").highlightWithinTextarea({
+            highlight: frm.doc.search
+        }).hide()
+    },
     read_image: function (frm) {
         frappe.hide_msgprint(true);
         frappe.realtime.on("ocr_progress_bar", function (data) {
