@@ -1,6 +1,3 @@
-// frappe.ui.form.on("OCR Read", {})
-
-
 (function($) {
 	let ID = 'hwt';
 
